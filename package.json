@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description":
     "generate keycodes for keyboard events based on the W3C standard",
-  "main": "distribution/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "generate": "node -r ts-node/register generate",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "npm run generate && lint-staged"
+    "precommit": "npm run generate && npm run build && lint-staged"
   },
   "keywords": ["keycode", "w3c"],
   "author": "Pierre-Marc Airoldi",
